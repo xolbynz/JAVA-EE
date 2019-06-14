@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<%=a %>
+<p> 
+광주광역시 난ㅁ구 송암로 60 cgi센터<br>
+062-655-3507<br>
+진흥동 2층 스마트 미디어 인재 개발원
+</p>
+</body>
+</html>
