@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1><a href="">WEB Programming</a></h2><br>
+	<button>NIGHT</button>
+	<button>DAY</button>
+	<ul>
+	<li>HTML</li><br>
+	<li>CSS</li><br>
+	<li>Javascript</li><br>
+	</ul>
+	
+<span>javascript는 웹 페이스를 동작을ㄹㄹㄹㄹㄹ동적인 페이지로 만들어주는 언어입니다.ㄹㄹㄹㄹㄹㄹㄹㄹㄹ</span>
+	<script>
+	var body = document.querySelector ('body');
+	var buttons= document.querySelectorAll('button');
+	
+	buttons[0].onclick= function(){
+		body.style.color='white';
+		body.style.background='black';
+	}
+	buttons[1].onclick= function(){
+		body.style.color='black';
+		body.style.background='white';
+	}
+	</script>
+</body>
+</html>
