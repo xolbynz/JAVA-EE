@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style type="text/css">
+div{
+	
+	float: left;
+	margin: 10px;
+	border:3px solid limegreen;
+	text-align: center;
+	padding:10px;
+	width: 70px;
+}
+
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<img src="https://t1.daumcdn.net/cfile/tistory/2773FC385772415F23">
+<br>
+<script type="text/javascript">
+
+	for(var dan =2; dan<10;dan++){
+		document.write("<div>")
+		document.write(`<h3>${dan}단</h3>`);
+		for(var j =1; j<10;j++){
+			document.write("<p>"+dan+'x'+j+'='+(dan*j)+"</p>");
+			
+	
+		}
+		document.write("</div>")
+	}
+
+
+</script>
+</body>
+</html>
