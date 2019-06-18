@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	//배열의 최댓값 찾기 
+	var arr = [23,54,78,13,44];
+	var max=0;
+	for(var i in arr){
+		if(max<arr[i]){
+			max=arr[i]
+		}	
+	}
+	alert(max);
+	///////////////////////////////////////////////// 
+
+	
+	var number=[1,2,3,4,5,6,7,8,9,10];
+	number.sort();
+	alert(number); // 1 , 10 ,2 ,3 ,4, 5,6,7,8,9 이렇게된다.. 왜 냐 문자 형으로 보기때문 
+	
+	function ASC(a,b){
+		return a-b;
+	}
+	function DESC(a,b){
+		return b-a;
+	}
+	number.sort(ASC);
+	alert(number);
+	
+	//sort(compareFunction)
+	//->인자를 넣어주지 않으면 요소를 문자로 인식하여 사전 순으로 정렬 
+	</script>
+
+</body>
+</html>

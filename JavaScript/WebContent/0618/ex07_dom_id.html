@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="txt"></p>
+<button onclick="show()">클릭</button>
+
+<script type="text/javascript">
+
+	function show(){
+		//1.제어할 대상 검색 
+		var pTag=document.getElementById('txt');
+		//2.p태그에 텍스트 추가하기 
+		pTag.innerHTML='<h1>p태그에 내용 추가 해보기</h1> '
+	}
+</script>
+
+</body>
+</html>

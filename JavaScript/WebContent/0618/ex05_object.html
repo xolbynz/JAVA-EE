@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+	//객체 선언-1
+	var Tv={};
+	Tv.channel=7;
+	Tv.volume=5;
+	Tv.onOff=false;
+	Tv.show=function(){
+	var state=
+		`채널 :${Tv.channel}/
+	음량:${Tv.volume}/
+	상태:${Tv.onOff}`;
+	
+	alert(state);
+	}
+	Tv.show();
+	
+	//객체 선언 -2 
+	var Tv2={
+	channel:6,
+	volume:3,
+	onOff:true,
+	show:function(){
+		var state= `채널:${this.channel}/
+					음량:${this.volume}/
+					상태:${this.onOff}`;
+					alert(state);
+	}
+		
+	};
+	
+
+	
+	</script>
+</body>
+</html>
