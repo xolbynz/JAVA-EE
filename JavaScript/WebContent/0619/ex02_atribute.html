@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<img src="img/KakaoTalk_20190619_163618454.gif">
+<br>
+<button>이미지변경</button>
+
+<script>
+var button= document.getElementsByTagName('button');
+//버튼에 이벤트 등록-=> .addEventListener(Event,Function);
+button[0].addEventListener('click',imgChange);
+
+function imgChange(){
+	var img=document.getElementsByTagName('img');
+	//html요소.setAttribute(속성명,값)
+	img[0].setAttribute('src','img/KakaoTalk_20190619_163619213.gif');
+	
+	//html요소.속성=값
+	img[0].src='img/KakaoTalk_20190619_163619213.gif';
+}
+</script>
+
+</body>
+</html>

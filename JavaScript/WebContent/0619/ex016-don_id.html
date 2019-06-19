@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="">
+		<input type="text" onkeypress="show()" id='txt'><br> 
+		<input type="button" value="출력"><br>
+
+	</form>
+	<p id="content"></p>
+	<script>
+		var input = document.getElementById('txt');
+		var pTag=document.getElementById('content');
+		function show() {
+			//p태그에 내용 출력 
+			pTag.innerHTML=input.value;
+
+		}
+	</script>
+</body>
+</html>

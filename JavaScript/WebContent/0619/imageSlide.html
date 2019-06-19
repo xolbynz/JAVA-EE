@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/imageSlide.css">
+</head>
+<body>
+	<div id="img">
+		<input type="button" id="btn1" class="btn pre" value="<" >
+		<input type="button" id="btn2" class="btn next" value=">" >
+	</div>
+		<script>
+			var bg=document.querySelector('#img');
+			var button = document.querySelectorAll('.btn');
+			var current=1;
+			button[0].addEventListener('click',preImg);
+			button[1].addEventListener('click',nextImg);
+			
+			function preImg(){
+				current -=1;
+				//스타일 변경
+				if(current===0) current=14;
+				
+				bg.style.backgroundImage=`url(img/${current}.jpg)`;
+			}
+			function nextImg(){
+				current +=1;
+				//스타일 변경
+				
+				if(current===15) current=1;
+
+				bg.style.backgroundImage=`url(img/${current}.jpg)`;
+			}
+			
+		</script>
+</body>
+</html>

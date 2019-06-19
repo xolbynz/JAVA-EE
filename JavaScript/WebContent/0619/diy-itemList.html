@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>여행 준비물 점검 목록</title>
+	<link rel="stylesheet" href="css/input.css">
+	<link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+	<div id="wrapper">
+		<h2>여행 준비물 점검 목록</h2>
+		<form>
+			<input type="text" id="item" autofocus="true">
+			<button type="button" id="add" class="addBtn">추가</button>
+		</form>
+		<div id="itemList"></div>
+	</div>    	
+<script type="text/javascript">
+var itemList=[];//여행준비물 목록
+var addBtn = document.getElementById('add');
+//이벤트를 등록 하는 방식
+addBtn.addEventListener('click',addItem);
+
+function addItem(){
+	//추가
+	
+	var item=document.getElementById('item');
+	itemList.push(item.value);
+	
+	item.value='';
+	item.focus();
+//출력
+	showList();
+
+}
+function showList(){
+	var list="<ul>";
+	for(var i=0; i<itemList.length;i++){
+		list += `<li>${itemList[i]}<span class="close" id=${i}>X</span></li>`;
+	}
+	list +="</ul>";
+	document.getElementById('itemList').innerHTML=list;
+
+	//X버튼에 대한 이벤트 등록 
+	var removeBtn = document.getElementsByClassName('close');
+	for(var i=0;i<removeBtn.length;i++){
+	removeBtn[i].addEventListener('click',removeItem);
+	
+	}
+}
+	function removeItem(){
+		//this:이벤트가 발생된 HTML요소를 가르키는 함수
+		//getAttribute(속성이름):HTML 요소의 속성값 반환
+		var id= this.getAttribute('id');
+		itemList.splice(id,1);
+		showList();
+	}
+</script>
+
+</body>
+</html>
