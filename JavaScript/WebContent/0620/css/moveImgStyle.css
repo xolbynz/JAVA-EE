@@ -9,11 +9,18 @@
 	position: relative;
 }
 
-img {
+#horse {
 	width: 70px;
 	height: 170px;
 	position: absolute;
-	right: 0px;
+	right: 500px;
+	bottom: 200px;
+}
+#carrot{
+	width: 70px;
+	height: 400px;
+	right: 1210px;
+
 	bottom: 200px;
 }
 
