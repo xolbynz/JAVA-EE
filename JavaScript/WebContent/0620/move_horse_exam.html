@@ -7,7 +7,8 @@
 </head>
 <body>
     <div id="bg">
-        <img src='img/horse.png'> 
+    	<img src='img/carrot.png' id='carrot'>
+        <img src='img/horse.png' id='horse'> 
         <button class='btn left'>LEFT</button><button class='btn right'>RIGHT</button>
     </div>
     
@@ -16,11 +17,27 @@
     $(function(){
     	$(document).on('keydown',moveHorse);
     });
-    
+    var num=$('#horse').css('right');
+    var num1=parseInt(num);
+    var right=document.getElementById('horse')
     function moveHorse(event){
-    	console.log(event.keycode
-    			);
+    	//left'askii is 37  
+    	//right'askii is 39
+    	console.log(event.keyCode);
+
+    	if(event.keyCode===37){
+    		$('#horse').css({'transform':'scaleX(1)'});
+    		$('#horse').css({'right':num1+=10});
+    		 console.log(num1);
+    		
+    	}else if (event.keyCode===39){
+    		$('#horse').css({'transform':'scaleX(-1)'});
+    		$('#horse').css({'right':num1-=10});
+    		 console.log(num1);
+    	}
     }
+	
+    
     </script>
     
 </body>
