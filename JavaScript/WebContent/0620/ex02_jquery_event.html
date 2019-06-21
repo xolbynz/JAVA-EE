@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="head">Jquery 이벤트 다루기 </h1>
+    <!--  네트워크를 통해 사용하는 방식 -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script>
+	$(function(){
+		//이벤트 등록 -> .on(이벤트,이벤트 핸들러);
+		//명령대상.명령실행문->$(요소).메소드();
+		$('body').on('mouseover',function(){
+			$(this).css('background-color','green')
+		});
+		$('body').on('mouseout',function(){
+			$(this).css('background-color','black')
+		});
+		
+	$('#head').on({
+		'mouseover':function(){
+			$(this).css('background-color','green');
+		},
+		'mouseout':function(){
+			$(this).css('background-color','black');
+		}
+	});
+	});
+	</script>
+</body>
+</html>

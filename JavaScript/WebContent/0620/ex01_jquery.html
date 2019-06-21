@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>jQuery 다뤄보기</h1>
+	<h1 id="g2">●</h1>
+	<script src="js/jquery-3.4.1.min.js">
+	</script>
+	<script type="text/javascript">
+		//jquery 구조 -1 
+		$(document).ready(function(){  //웹 문서 로드가 완료되었을때 실행
+			alert('웹 문서 로드 완료~!');
+		});
+		
+		//jquery 구조 -2 
+/* 		$(function() {
+			$('#g2').css('color','red').css('background-color','blue').css('font-size','100px');
+			
+		}); */
+		$('h1').css({
+			'color':'red',
+			'background-color':'blue',
+			'font-size':'100px'
+		});
+	</script>
+</body>
+</html>
